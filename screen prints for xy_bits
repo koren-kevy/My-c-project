@@ -1,0 +1,35 @@
+Please enter two positive whole numbers
+89
+90
+The value of x is: 89
+The value of y is: 90
+The value of x in base 2 is:00000000000000000000000001011001
+The value of y in base 2 is:00000000000000000000000001011010
+After turning on the bit in the 13th place, x is now: 4185
+For y, the bit in the 7th place was: ON
+After turning on the bit in the 13th place, in base 2, x is now:00000000000000000001000001011001
+Process finished with exit code 0
+
+Please enter two positive whole numbers
+378
+98
+The value of x is: 378
+The value of y is: 98
+The value of x in base 2 is:00000000000000000000000101111010
+The value of y in base 2 is:00000000000000000000000001100010
+After turning on the bit in the 13th place, x is now: 4474
+For y, the bit in the 7th place was: ON
+After turning on the bit in the 13th place, in base 2, x is now:00000000000000000001000101111010
+Process finished with exit code 0
+
+Please enter two positive whole numbers
+76
+54
+The value of x is: 76
+The value of y is: 54
+The value of x in base 2 is:00000000000000000000000001001100
+The value of y in base 2 is:00000000000000000000000000110110
+After turning on the bit in the 13th place, x is now: 4172
+For y, the bit in the 7th place was: OFF
+After turning on the bit in the 13th place, in base 2, x is now:00000000000000000001000001001100
+Process finished with exit code 0
