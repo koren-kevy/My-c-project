@@ -1,0 +1,51 @@
+#include <stdio.h>
+/*
+ *This program takes 2 unsigned long variables from the user, or a file and does the following:
+ *Prints the variables and the variables in base 2.
+ *Turns on the bit in the 13th place for the first variable.
+ *Checks if the 7th bit is on or off for the second variable.
+ *Prints the outcomes.
+ */
+int main(void)
+{
+    unsigned long x,y; /* The 2 variables */
+    int i, bit6; /* bit6 is used for checking if the 6th bit is on or off. */
+    printf("Please enter two positive whole numbers \n");
+    scanf("%lu %lu", &x, &y); /* Getting the input for the 2 variables. */
+
+    printf("The value of x is: %d \n", x);
+    printf("The value of y is: %d \n", y);
+
+    printf("The value of x in base 2 is:");
+    for(i = sizeof(x) * 8 - 1; i>= 0; i--)
+        printf("%d", (x >> i) & 1);
+    /* We start at the highest bit, and print it, then we move i steps,
+    in order to print the next bit in line. */
+
+    printf("\n");
+
+    printf("The value of y in base 2 is:");
+    for(i = sizeof(y) * 8 - 1; i >= 0; i--)
+        printf("%d", (y >> i) & 1);
+    /* We do in again for y. */
+
+    printf("\n");
+
+    x |= (1ul << 12);
+    /* We take the value 1 as an unsigned long variable and move it 12 bits.
+    Then, we preform the OR operator to turn on the bit in the 13th place. */
+
+    bit6 = (y & (1ul << 6)) != 0;
+    /* We do as before and move the value 1, 6 bits.
+    Then we check if the bit in the 7th place for y is 1 or 0, and give it a true of false value. */
+
+    printf("After turning on the bit in the 13th place, x is now: %d \n", x);
+    printf("For y, the bit in the 7th place was: %s \n", bit6 ? "ON" : "OFF");
+    /* We print if the bit in the 7th place for y is on or off. */
+
+    printf("After turning on the bit in the 13th place, in base 2, x is now:");
+    for(i = sizeof(x) * 8 - 1; i >= 0; i--)
+        printf("%d", (x >> i) & 1);
+
+    return 0;
+}
