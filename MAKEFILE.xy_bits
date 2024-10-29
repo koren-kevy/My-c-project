@@ -1,0 +1,12 @@
+TARGET = bit_manipulation
+SRCS = xy_bits
+CC = gcc
+CFLAGS = -Wall -ansi -pedantic
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
+
+clean:
+	rm -f $(TARGET)
